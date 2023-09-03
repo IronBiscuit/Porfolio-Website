@@ -25,11 +25,14 @@ app.use(cookieParser())
 //Allows us to manage pre-flight requests
 app.use(corsHandler(corsOpts))
 
-//Allows website to find the public folder
+//Allows index to find the public folder and animation root
 app.use('/', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'routes')))
 
 //Finds the .js file for Index
-app.use('/', require('./routes/root'))
+app.use('/', require('./routes/root/root'))
+
+
 
 //Default routing for 404 errors
 app.all('*', (req, res) => {
