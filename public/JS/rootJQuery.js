@@ -11,21 +11,21 @@
     // });
 
 
-    // Smooth scrolling on the navbar links
-    // $(".navbar-nav a").on('click', function (event) {
-    //     if (this.hash !== "") {
-    //         event.preventDefault();
+    //Smooth scrolling on the navbar links
+    $(".nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
             
-    //         $('html, body').animate({
-    //             scrollTop: $(this.hash).offset().top - 45
-    //         }, 1500, 'easeInOutExpo');
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top - 45
+            }, 1500, 'easeInOutExpo');
             
-    //         if ($(this).parents('.navbar-nav').length) {
-    //             $('.navbar-nav .active').removeClass('active');
-    //             $(this).closest('a').addClass('active');
-    //         }
-    //     }
-    // });
+            if ($(this).parents('.nav').length) {
+                $('.nav .active').removeClass('active');
+                $(this).closest('a').addClass('active');
+            }
+        }
+    });
 
     $(document).ready(function(){
         $(".navbar .nav-link").on('click', function(event) {
