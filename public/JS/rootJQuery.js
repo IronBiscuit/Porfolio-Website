@@ -1,6 +1,7 @@
 (function ($) {
     "use strict";
 
+
     //Smooth scrolling on the navbar links
     $(".nav a").on('click', function (event) {
         if (this.hash !== "") {
@@ -10,13 +11,11 @@
                 scrollTop: $(this.hash).offset().top - 45
             }, 1500, 'easeInOutExpo');
             
-            if ($(this).parents('.nav').length) {
-                $('.nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
-            }
+            
         }
     });
 
+    //Navbar move to element
     $(document).ready(function(){
         $(".navbar .nav-link").on('click', function(event) {
     
