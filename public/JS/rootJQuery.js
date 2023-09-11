@@ -1,6 +1,13 @@
 (function ($) {
     "use strict";
 
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+    });
+
+    new WOW().init();
+
+    
 
     //Smooth scrolling on the navbar links
     $(".nav a").on('click', function (event) {
@@ -18,11 +25,9 @@
     //Navbar move to element
     $(document).ready(function(){
         $(".navbar .nav-link").on('click', function(event) {
-    
             if (this.hash !== "") {
     
                 event.preventDefault();
-    
                 var hash = this.hash;
     
                 $('html, body').animate({
