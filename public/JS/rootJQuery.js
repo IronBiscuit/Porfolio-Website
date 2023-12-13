@@ -1,7 +1,6 @@
 (function ($) {
     "use strict";
 
-    
 
     $(window).on('beforeunload', function() {
         $(window).scrollTop(0);
@@ -85,6 +84,8 @@
             loop: true
         });
     }
+
+    // 
 
 
     var swiper1 = new Swiper('.client-swiper', {
